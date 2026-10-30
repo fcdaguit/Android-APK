@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipToPadding="false"
+        android:overScrollMode="never" />
+
+    <TextView
+        android:id="@+id/status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top|start"
+        android:padding="10dp"
+        android:fontFamily="monospace"
+        android:textColor="#39FF14"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/menuBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top|end"
+        android:padding="14dp"
+        android:text="⋮"
+        android:textColor="#39FF14"
+        android:textSize="26sp" />
+
+    <LinearLayout
+        android:id="@+id/panel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:background="#F2000000"
+        android:orientation="vertical"
+        android:padding="12dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button android:id="@+id/btnPlay" style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1.3"
+                android:background="@drawable/btn_bg" android:textColor="#39FF14" android:textAllCaps="false"
+                android:fontFamily="monospace" android:text="Play" />
+            <Button android:id="@+id/btnReset" style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+                android:layout_marginStart="6dp"
+                android:background="@drawable/btn_bg" android:textColor="#39FF14" android:textAllCaps="false"
+                android:fontFamily="monospace" android:text="Reset" />
+            <Button android:id="@+id/btnScript" style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+                android:layout_marginStart="6dp"
+                android:background="@drawable/btn_bg" android:textColor="#39FF14" android:textAllCaps="false"
+                android:fontFamily="monospace" android:text="Script" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:orientation="horizontal">
+
+            <Button android:id="@+id/btnLang" style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+                android:background="@drawable/btn_bg" android:textColor="#39FF14" android:textAllCaps="false"
+                android:fontFamily="monospace" android:text="Lang" />
+            <Button android:id="@+id/btnMode" style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+                android:layout_marginStart="6dp"
+                android:background="@drawable/btn_bg" android:textColor="#39FF14" android:textAllCaps="false"
+                android:fontFamily="monospace" android:text="Mode" />
+        </LinearLayout>
+
+        <TextView android:id="@+id/lblSize" android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:layout_marginTop="8dp" android:fontFamily="monospace" android:textColor="#39FF14" android:textSize="12sp" />
+        <SeekBar android:id="@+id/seekSize" android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:max="80" android:progressTint="#39FF14" android:thumbTint="#39FF14" />
+
+        <TextView android:id="@+id/lblSpeed" android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:fontFamily="monospace" android:textColor="#39FF14" android:textSize="12sp" />
+        <SeekBar android:id="@+id/seekSpeed" android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:max="100" android:progressTint="#39FF14" android:thumbTint="#39FF14" />
+
+        <TextView android:id="@+id/lblTol" android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:fontFamily="monospace" android:textColor="#39FF14" android:textSize="12sp" />
+        <SeekBar android:id="@+id/seekTol" android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:max="4" android:progressTint="#39FF14" android:thumbTint="#39FF14" />
+    </LinearLayout>
+</FrameLayout>
